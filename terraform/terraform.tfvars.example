@@ -1,0 +1,11 @@
+pve_host           = "https://192.168.1.10:8006/"
+pve_token_id       = "root@pam!terraform"
+pve_token_secret   = "your-token-secret"
+pve_node           = "pve"
+container_vmid     = 200
+container_hostname = "aboutme"
+container_password = "securepassword"
+container_ip       = "192.168.1.200/24"
+container_gateway  = "192.168.1.1"
+os_template        = "local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
+ssh_public_key     = "ssh-rsa AAAAB3Nza..."

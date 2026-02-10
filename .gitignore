@@ -1,0 +1,35 @@
+# Environment files (sensitive data)
+.env
+
+# SSH Keys
+*.pem
+*.key
+id_rsa*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/backend.hcl
+terraform/*.tfvars
+terraform/plan.tfplan
+terraform/.terraform.lock.hcl
+terraform/about_me_plan
+
+# Ansible
+ansible/inventory.ini
