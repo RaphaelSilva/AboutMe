@@ -1,55 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Raphael Silva</title>
+    <title>Raphael Silva | Senior Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-        .container {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 600px;
-            text-align: center;
+
+        .lang-pt {
+            display: none;
         }
-        h1 {
-            color: #2c3e50;
-        }
-        p {
-            margin-bottom: 1.5rem;
-        }
-        .btn {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #2980b9;
+
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Hello, I'm Raphael Silva</h1>
-        <p>Welcome to my personal space. I am passionate about technology, infrastructure as code, and building things.</p>
-        <p>Check out my CV below:</p>
-        <a href="cv.pdf" class="btn" target="_blank">Download My CV</a>
-    </div>
+
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="font-bold text-xl tracking-tight">
+                    Raphael <span class="text-blue-600">Silva</span>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <button id="toggleLang"
+                        class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-blue-600 transition-colors">
+                        <span class="lang-en">Português 🇧🇷</span>
+                        <span class="lang-pt">English 🇺🇸</span>
+                    </button>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="https://github.com/RaphaelSilva" target="_blank"
+                            class="text-slate-400 hover:text-slate-900 transition-colors"><i
+                                class="fab fa-github fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/engraphael/" target="_blank"
+                            class="text-slate-400 hover:text-slate-900 transition-colors"><i
+                                class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div
+                class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">
+                <span class="lang-en">Available for Senior Roles</span>
+                <span class="lang-pt">Disponível para Cargos Sênior</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                <span class="lang-en">Senior Software Engineer & <span class="gradient-text">Systems
+                        Specialist.</span></span>
+                <span class="lang-pt">Engenheiro de Software Sênior e <span class="gradient-text">Especialista em
+                        Sistemas.</span></span>
+            </h1>
+            <p class="text-xl text-slate-600 mb-10 max-w-3xl leading-relaxed">
+                <span class="lang-en">Highly accomplished Senior Software Engineer with 10+ years of experience in
+                    full-stack development, system verification, and automation. Proven expertise in Node.js, Python,
+                    Java, and SystemVerilog.</span>
+                <span class="lang-pt">Engenheiro de Software Sênior altamente realizado com mais de 10 anos de
+                    experiência em desenvolvimento full-stack, verificação de sistemas e automação. Expertise comprovada
+                    em Node.js, Python, Java e SystemVerilog.</span>
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="RAPHAEL SILVA DO NASCIMENTO - CV-EN.pdf" download
+                    class="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center gap-2">
+                    <i class="fas fa-download"></i>
+                    <span class="lang-en">Download CV</span>
+                    <span class="lang-pt">Baixar CV</span>
+                </a>
+                <a href="#contact"
+                    class="bg-slate-900 text-white px-8 py-4 rounded-lg font-medium hover:bg-slate-800 transition-all shadow-lg shadow-slate-200">
+                    <span class="lang-en">Get in touch</span>
+                    <span class="lang-pt">Entre em contato</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Capabilities -->
+    <section class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-blue-600 mb-12">
+                <span class="lang-en">Core Capabilities</span>
+                <span class="lang-pt">Principais Competências</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Backend -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="w-8 h-px bg-blue-600 mr-3"></span>
+                        Software Architecture
+                    </h3>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                        <span class="lang-en">Building distributed systems and cloud-native applications using Node.js,
+                            Python, and AWS. Focus on SOLID principles and scalability.</span>
+                        <span class="lang-pt">Construção de sistemas distribuídos e aplicações cloud-native usando
+                            Node.js, Python e AWS. Foco em princípios SOLID e escalabilidade.</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500 uppercase">
+                        <span>Node.js</span> • <span>TypeScript</span> • <span>Python</span> • <span>AWS Lambda</span> •
+                        <span>Docker</span>
+                    </div>
+                </div>
+                <!-- Data -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="w-8 h-px bg-blue-600 mr-3"></span>
+                        Data Engineering
+                    </h3>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                        <span class="lang-en">Implementation of ETL processes, automated scraping (Selenium), and
+                            high-efficiency data flows between legacy and modern databases.</span>
+                        <span class="lang-pt">Implementação de processos ETL, scraping automatizado (Selenium) e fluxos
+                            de dados de alta eficiência entre bancos de dados legados e modernos.</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500 uppercase">
+                        <span>PostgreSQL</span> • <span>DynamoDB</span> • <span>ETL</span> • <span>BI</span> •
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+                <!-- Low Level -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="w-8 h-px bg-blue-600 mr-3"></span>
+                        System Verification
+                    </h3>
+                    <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                        <span class="lang-en">Expertise in SoC verification using SystemVerilog and UVM, ensuring
+                            technical reliability for mission-critical hardware designs.</span>
+                        <span class="lang-pt">Expertise em verificação de SoC usando SystemVerilog e UVM, garantindo
+                            confiabilidade técnica para projetos de hardware críticos.</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500 uppercase">
+                        <span>SystemVerilog</span> • <span>UVM</span> • <span>C/C++</span> • <span>Embedded</span> •
+                        <span>Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-extrabold mb-16 tracking-tight">
+                <span class="lang-en">Experience & Impact</span>
+                <span class="lang-pt">Experiência e Impacto</span>
+            </h2>
+
+            <div class="space-y-16">
+                <!-- Boticario -->
+                <div class="group">
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold group-hover:text-blue-600 transition-colors">Grupo Boticário</h3>
+                        <span class="text-slate-400 font-mono text-sm">Jun 2021 — Dec 2025</span>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <span class="lang-en">Designed, developed, and deployed scalable Node.js microservices and
+                            Python automation bots. Implemented ETL processes and scraping bots to optimize data
+                            retrieval from legacy systems. Created AWS Lambda functions and adhered to SOLID
+                            principles.</span>
+                        <span class="lang-pt">Projetei, desenvolvi e implantei microsserviços escaláveis em Node.js e
+                            bots de automação em Python. Implementei processos ETL e bots de scraping para otimizar a
+                            recuperação de dados de sistemas legados. Criei funções AWS Lambda e segui princípios
+                            SOLID.</span>
+                    </p>
+                    <div class="flex gap-4 text-xs font-bold text-blue-600 uppercase tracking-widest">
+                        <span>#AWS</span> <span>#NodeJS</span> <span>#ETL</span> <span>#Python</span>
+                    </div>
+                </div>
+
+                <!-- Flex -->
+                <div class="group">
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold group-hover:text-blue-600 transition-colors">Flex</h3>
+                        <span class="text-slate-400 font-mono text-sm">Jan 2020 — Jun 2021</span>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <span class="lang-en">Led development for the Automation team, modeling web architecture and
+                            coding in Python, JavaScript, C#, and Java. Developed BI solutions (Dashboards, ETL, Data
+                            Warehouse) and integrated industrial machines using ModBus, OPC-UA, and HTTP
+                            protocols.</span>
+                        <span class="lang-pt">Liderei o desenvolvimento da equipe de Automação, modelando arquitetura
+                            web e codificando em Python, JavaScript, C# e Java. Desenvolvi soluções de BI (Dashboards,
+                            ETL, Data Warehouse) e integrei máquinas industriais usando protocolos ModBus, OPC-UA e
+                            HTTP.</span>
+                    </p>
+                    <div class="flex gap-4 text-xs font-bold text-blue-600 uppercase tracking-widest">
+                        <span>#Automation</span> <span>#BI</span> <span>#Prophet</span> <span>#IIoT</span>
+                    </div>
+                </div>
+
+                <!-- NXP -->
+                <div class="group">
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold group-hover:text-blue-600 transition-colors">NXP Semiconductors
+                        </h3>
+                        <span class="text-slate-400 font-mono text-sm">Aug 2014 — Mar 2019</span>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <span class="lang-en">Verified ARM-based microcontrollers ensuring IP performance through
+                            testbench creation across RTL, GLS, and Post Layout phases. Implemented SystemVerilog
+                            verification environments using UVM. Developed Linux Bash scripts to optimize tasks.</span>
+                        <span class="lang-pt">Verifiquei microcontroladores baseados em ARM garantindo a performance de
+                            IP através da criação de testbenches nas fases RTL, GLS e Pós-Layout. Implementei ambientes
+                            de verificação SystemVerilog usando UVM. Desenvolvi scripts Bash no Linux para otimizar
+                            tarefas.</span>
+                    </p>
+                    <div class="flex gap-4 text-xs font-bold text-blue-600 uppercase tracking-widest">
+                        <span>#SystemVerilog</span> <span>#UVM</span> <span>#SoC</span> <span>#Linux</span>
+                    </div>
+                </div>
+
+                <!-- CNPq -->
+                <div class="group">
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold group-hover:text-blue-600 transition-colors">CNPq - CI Brasil</h3>
+                        <span class="text-slate-400 font-mono text-sm">Aug 2013 — Aug 2014</span>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <span class="lang-en">Scholarship recipient. Verified IP integration between a DSP module and
+                            the CHARRUA processor using UVM methodologies and SystemVerilog. Coded verification
+                            environments for the Carry Phase Synchronizer module.</span>
+                        <span class="lang-pt">Bolsista. Verifiquei a integração de IP entre um módulo DSP e o
+                            processador CHARRUA usando metodologias UVM e SystemVerilog. Codifiquei ambientes de
+                            verificação para o módulo Carry Phase Synchronizer.</span>
+                    </p>
+                    <div class="flex gap-4 text-xs font-bold text-blue-600 uppercase tracking-widest">
+                        <span>#UVM</span> <span>#SystemVerilog</span> <span>#FPGA</span>
+                    </div>
+                </div>
+
+                <!-- PSG -->
+                <div class="group">
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold group-hover:text-blue-600 transition-colors">PSG Tecnologia
+                            Aplicada</h3>
+                        <span class="text-slate-400 font-mono text-sm">Mar 2013 — Jul 2013</span>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <span class="lang-en">Migrated the public billing system of Mato Grosso do Sul from Cobol to C#,
+                            SQL Server, and Visual Studio. Developed core receiving programs and bank text file
+                            interpreters.</span>
+                        <span class="lang-pt">Migrei o sistema de cobrança pública de Mato Grosso do Sul de Cobol para
+                            C#, SQL Server e Visual Studio. Desenvolvi programas principais de recebimento e
+                            interpretadores de arquivos de texto bancários.</span>
+                    </p>
+                    <div class="flex gap-4 text-xs font-bold text-blue-600 uppercase tracking-widest">
+                        <span>#C#</span> <span>#SQLServer</span> <span>#Migration</span>
+                    </div>
+                </div>
+
+                <!-- TDR -->
+                <div class="group">
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold group-hover:text-blue-600 transition-colors">TDR Informática</h3>
+                        <span class="text-slate-400 font-mono text-sm">Aug 2010 — Nov 2011</span>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <span class="lang-en">Re-engineered hospital management software from Delphi 10 to Java OO
+                            (MVC). Provided Java support to the development team and contributed to SCRUM methodology
+                            implementation.</span>
+                        <span class="lang-pt">Reengenharia de software de gestão hospitalar de Delphi 10 para Java OO
+                            (MVC). Prestei suporte em Java para a equipe de desenvolvimento e contribuí para a
+                            implementação da metodologia SCRUM.</span>
+                    </p>
+                    <div class="flex gap-4 text-xs font-bold text-blue-600 uppercase tracking-widest">
+                        <span>#Java</span> <span>#MVC</span> <span>#Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-extrabold mb-12 tracking-tight">
+                <span class="lang-en">Education</span>
+                <span class="lang-pt">Educação</span>
+            </h2>
+            <div class="grid gap-8 md:grid-cols-2">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                    <div class="text-sm text-blue-600 font-bold uppercase tracking-wider mb-2">2021</div>
+                    <h3 class="text-xl font-bold mb-1">MBA Business Intelligence</h3>
+                    <p class="text-slate-500">Estácio de Sá</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                    <div class="text-sm text-blue-600 font-bold uppercase tracking-wider mb-2">2014</div>
+                    <h3 class="text-xl font-bold mb-1">ASIC Specialization</h3>
+                    <p class="text-slate-500">Programa CI-Brasil CT1 (UFRGS)</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 md:col-span-2">
+                    <div class="text-sm text-blue-600 font-bold uppercase tracking-wider mb-2">2013</div>
+                    <h3 class="text-xl font-bold mb-1">Computer Engineering</h3>
+                    <p class="text-slate-500">Universidade para o Desenvolvimento do Estado e Região do Pantanal
+                        (UNIDERP)</p>
+                    <p class="text-slate-400 text-sm mt-2">Emphasis on Hardware</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="py-20 bg-blue-600 text-white px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                <span class="lang-en">Interested in the full story?</span>
+                <span class="lang-pt">Interessado na história completa?</span>
+            </h2>
+            <p class="text-blue-100 mb-10 text-lg">
+                <span class="lang-en">Download my detailed CV to see complete project histories, technical
+                    specifications, and research publications.</span>
+                <span class="lang-pt">Baixe meu currículo detalhado para ver históricos completos de projetos,
+                    especificações técnicas e publicações de pesquisa.</span>
+            </p>
+            <a href="RAPHAEL SILVA DO NASCIMENTO - CV-EN.pdf" download
+                class="inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-lg font-bold hover:bg-blue-50 transition-transform hover:-translate-y-1 shadow-xl">
+                <i class="fas fa-file-pdf fa-lg"></i>
+                <span class="lang-en">Download PDF Resume</span>
+                <span class="lang-pt">Baixar Currículo em PDF</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Professional Focus -->
+    <section class="py-20 bg-slate-900 text-white px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">
+                <span class="lang-en">Professional Philosophy</span>
+                <span class="lang-pt">Filosofia Profissional</span>
+            </h2>
+            <p class="text-slate-400 text-lg leading-relaxed mb-10 italic">
+                <span class="lang-en">"I believe in code as a tool for reliability and impact. Whether it's a cloud
+                    microservice or a hardware verification script, my focus is on efficiency, clean architecture, and
+                    solving real-world problems."</span>
+                <span class="lang-pt">"Acredito no código como uma ferramenta de confiabilidade e impacto. Seja um
+                    microsserviço na nuvem ou um script de verificação de hardware, meu foco é na eficiência,
+                    arquitetura limpa e resolução de problemas reais."</span>
+            </p>
+            <div class="flex justify-center space-x-12 opacity-50">
+                <div class="text-center">
+                    <p class="text-2xl font-bold">10+</p>
+                    <p class="text-xs uppercase tracking-widest">Years Exp.</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold">50+</p>
+                    <p class="text-xs uppercase tracking-widest">Projects</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold">∞</p>
+                    <p class="text-xs uppercase tracking-widest">Commitment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 bg-white">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold mb-4 tracking-tight">Raphael Silva</h2>
+            <p class="text-slate-500 mb-8">
+                <span class="lang-en">Senior Software Engineer | Campinas, Brazil</span>
+                <span class="lang-pt">Engenheiro de Software Sênior | Campinas, Brasil</span>
+            </p>
+            <a href="mailto:eng.raphaelsn@gmail.com"
+                class="text-2xl font-bold text-blue-600 hover:text-blue-700 underline underline-offset-8">
+                eng.raphaelsn@gmail.com
+            </a>
+            <div
+                class="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-slate-400 text-xs gap-4">
+                <p>© 2025 Raphael Silva do Nascimento.</p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/RaphaelSilva" target="_blank" class="hover:text-slate-900">GitHub</a>
+                    <a href="https://www.linkedin.com/in/engraphael/" target="_blank"
+                        class="hover:text-slate-900">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('toggleLang');
+        const enElements = document.querySelectorAll('.lang-en');
+        const ptElements = document.querySelectorAll('.lang-pt');
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            if (lang === 'pt') {
+                enElements.forEach(el => el.style.display = 'none');
+                ptElements.forEach(el => el.style.display = 'inline');
+                currentLang = 'pt';
+            } else {
+                enElements.forEach(el => el.style.display = 'inline');
+                ptElements.forEach(el => el.style.display = 'none');
+                currentLang = 'en';
+            }
+        }
+
+        btn.addEventListener('click', () => {
+            setLanguage(currentLang === 'en' ? 'pt' : 'en');
+        });
+
+        // Check URL for language parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        if (langParam === 'pt' || langParam === 'pt-br') {
+            setLanguage('pt');
+        }
+    </script>
 </body>
+
 </html>
